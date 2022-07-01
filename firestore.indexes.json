@@ -1,0 +1,89 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "is_pemasukan",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "is_pemasukan",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "month_created",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "month_created",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "year_created",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "laporan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "year_created",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nominal",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

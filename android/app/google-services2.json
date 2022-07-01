@@ -1,0 +1,112 @@
+{
+  "project_info": {
+    "project_number": "61854691513",
+    "firebase_url": "https://finance-plan-5ac94-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "finance-plan-5ac94",
+    "storage_bucket": "finance-plan-5ac94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61854691513:android:84a3d009a80f7e243bab68",
+        "android_client_info": {
+          "package_name": "com.example.finance_plan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61854691513-4d3la63rofek5mmr3mojhgab2jtmrjbg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "5f14b42bb3260f5a03d7d57d36f1b939da3d9256"
+          }
+        },
+        {
+          "client_id": "61854691513-7p2ohhnh8jlbulce3pbu6vkhsfnngl44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "c970893fc007d6fe7645247df6e2bc0be48c8055"
+          }
+        },
+        {
+          "client_id": "61854691513-aaqonthdeu2vu4pvavsfiai41b4cr0vt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "7028f59a6bc66d74893739de79a27ab8cb88a72c"
+          }
+        },
+        {
+          "client_id": "61854691513-ac29jb0eibrkblug3n87maf8luidpqes.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "ef97c89712d700abaf3fb13d879caa2ddeb484d3"
+          }
+        },
+        {
+          "client_id": "61854691513-bl6h7q3cbnt4j9n5ol3pk3us0glgaavd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "6aa06447fac9c757a6382b95f5c24ab161c1af1a"
+          }
+        },
+        {
+          "client_id": "61854691513-eautqq68ugv8ldc4jakpg9k552uv3lck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "2b55c7d27cd32c2bc683ca0e378927612601f292"
+          }
+        },
+        {
+          "client_id": "61854691513-f2vrt28usnem871vefek5p6q0ktpsm25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "d703665cacd61184e1150d35398a253da99657e8"
+          }
+        },
+        {
+          "client_id": "61854691513-ij9ppioamj43836rvapllcdnq8q75082.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "b8600852dc2e4457de5bbf5ec99a62daf0b0e28c"
+          }
+        },
+        {
+          "client_id": "61854691513-trg4131ki7t6gc09e9afuar78glkkbip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "6df5d4c4571d5790633f1a508611f07a3182a5a2"
+          }
+        },
+        {
+          "client_id": "61854691513-s7c9ffbabpvu7sakrq0c75hbphj19tnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhUcWztysRKyyt0OPErG8toYcrk3QLaa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61854691513-s7c9ffbabpvu7sakrq0c75hbphj19tnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

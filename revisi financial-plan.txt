@@ -1,0 +1,15 @@
+Revisi
+Login : Splash->Login with Google 
+-- Tidak perlu register 
+Opsi ketika pengeluaran dikurangin dari saldo atau hanya masuk di pencatatan
+Update profil
+--Foto maks 1mb
+-- Nama
+-- Setting Notifikasi ON/OFF
+Gols itu terdapat grafik persen
+Laporan Keuangan filter by bulan 
+Trouble
+-- Install di dua android berbeda
+
+
+

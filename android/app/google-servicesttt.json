@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "61854691513",
+    "project_id": "finance-plan-5ac94",
+    "storage_bucket": "finance-plan-5ac94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61854691513:android:84a3d009a80f7e243bab68",
+        "android_client_info": {
+          "package_name": "com.example.finance_plan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61854691513-7p2ohhnh8jlbulce3pbu6vkhsfnngl44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "c970893fc007d6fe7645247df6e2bc0be48c8055"
+          }
+        },
+        {
+          "client_id": "61854691513-s7c9ffbabpvu7sakrq0c75hbphj19tnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhUcWztysRKyyt0OPErG8toYcrk3QLaa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61854691513-s7c9ffbabpvu7sakrq0c75hbphj19tnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
