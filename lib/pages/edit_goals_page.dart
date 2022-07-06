@@ -129,7 +129,7 @@ class _EditGoalsPageState extends State<EditGoalsPage> {
                 await users
                     .doc(uid)
                     .collection('notif')
-                    .doc(value.docs.elementAt(i).get('notif_id'))
+                    .doc(value.docs.elementAt(i).get('notif_id').toString())
                     .delete();
                 await flutterLocalNotificationsPlugin
                     .cancel(value.docs.elementAt(i).get('notif_id'));

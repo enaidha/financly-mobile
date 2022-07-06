@@ -538,6 +538,7 @@ class _LaporanPageState extends State<LaporanPage> {
                         _filterBulan = 0;
                         _filterTahun = 0;
                       });
+                      Navigator.pop(context);
                     },
                     child: Container(
                         padding: const EdgeInsets.all(12),
@@ -545,7 +546,7 @@ class _LaporanPageState extends State<LaporanPage> {
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
-                        child: Text("Hapus Filter")),
+                        child: const Text("Hapus Filter")),
                   )
                 ],
               ),

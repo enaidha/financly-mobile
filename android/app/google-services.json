@@ -87,6 +87,14 @@
           }
         },
         {
+          "client_id": "61854691513-u9k4k6m1j4vmdhuddbqmhcs7enff84v4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finance_plan",
+            "certificate_hash": "6dbb74322fd1aca8da1d22258cda06637805b99e"
+          }
+        },
+        {
           "client_id": "61854691513-s7c9ffbabpvu7sakrq0c75hbphj19tnh.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -121,6 +129,22 @@
           "android_info": {
             "package_name": "com.ta.financly",
             "certificate_hash": "7028f59a6bc66d74893739de79a27ab8cb88a72c"
+          }
+        },
+        {
+          "client_id": "61854691513-ehhvd7vmo31mfbb8e9t5jjudlouo63ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ta.financly",
+            "certificate_hash": "6dbb74322fd1aca8da1d22258cda06637805b99e"
+          }
+        },
+        {
+          "client_id": "61854691513-kgmficoagn28kgde3nah4788vcfdp83r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ta.financly",
+            "certificate_hash": "b8600852dc2e4457de5bbf5ec99a62daf0b0e28c"
           }
         },
         {

@@ -28,6 +28,9 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
   double _appendProgres = 0.0;
   double _sisaTarget = 0.0;
 
+  TextEditingController checkListNotes = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
   getPref() {
     pref = preferences;
     Future.delayed(const Duration(seconds: 0)).then((value) {
@@ -56,6 +59,12 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
       return Colors.blue;
     }
     return Colors.red;
+  }
+
+  @override
+  void dispose() {
+    checkListNotes.dispose();
+    super.dispose();
   }
 
   @override
@@ -171,14 +180,65 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
                                 String? st;
                                 return Column(
                                   children: snap.data!.docs.map((e) {
-                                    var checklist = _checkList(
-                                        e['pembayaran'],
-                                        e['deadline_bulanan'],
-                                        e['jumlah_goals_bulanan'],
-                                        e['status_pembayaran'],
-                                        args.goalsId!,
-                                        e.id,
-                                        st);
+                                    var checklist = InkWell(
+                                      onTap: () {
+                                        try {
+                                          if (e['notes'] != null) {
+                                            showDialog(
+                                                context: context,
+                                                builder:
+                                                    (context) => AlertDialog(
+                                                          title: const Text(
+                                                              'Catatan Bayar'),
+                                                          content:
+                                                              Text(e['notes']),
+                                                          actions: [
+                                                            InkWell(
+                                                              onTap: () {
+                                                                Navigator.pop(
+                                                                    context);
+                                                              },
+                                                              child: Container(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .all(12),
+                                                                decoration: const BoxDecoration(
+                                                                    color:
+                                                                        mPrimaryColor,
+                                                                    borderRadius:
+                                                                        BorderRadius.all(
+                                                                            Radius.circular(12))),
+                                                                child: Text(
+                                                                  "Tutup",
+                                                                  style: mInputStyle.copyWith(
+                                                                      fontSize:
+                                                                          _sizeConfig.blockVertical! *
+                                                                              2,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w400,
+                                                                      color: Colors
+                                                                          .black),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ));
+                                          }
+                                        } catch (e) {
+                                          // ignore: avoid_print
+                                          print("belum ada notes");
+                                        }
+                                      },
+                                      child: _checkList(
+                                          e['pembayaran'],
+                                          e['deadline_bulanan'],
+                                          e['jumlah_goals_bulanan'],
+                                          e['status_pembayaran'],
+                                          args.goalsId!,
+                                          e.id,
+                                          st),
+                                    );
                                     st = e['status_pembayaran'];
                                     return checklist;
                                   }).toList(),
@@ -300,6 +360,20 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
                                       fontWeight: FontWeight.w400,
                                       color: Colors.black),
                                 ),
+                                content: Form(
+                                  key: formKey,
+                                  child: TextFormField(
+                                    controller: checkListNotes,
+                                    maxLines: 2,
+                                    validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return "Wajib mencantumkan catatan checklist";
+                                      }
+                                    },
+                                    decoration: const InputDecoration(
+                                        label: Text("Masukan Catatan")),
+                                  ),
+                                ),
                                 actions: [
                                   InkWell(
                                     onTap: () {
@@ -325,13 +399,16 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      int bayarKe =
-                                          int.parse(pembayaranKe.split('-')[1]);
-                                      save(goalsId, id, bayarKe);
-                                      setState(() {
-                                        isChecked = true;
-                                      });
-                                      Navigator.pop(context);
+                                      if (formKey.currentState!.validate()) {
+                                        int bayarKe = int.parse(
+                                            pembayaranKe.split('-')[1]);
+                                        save(goalsId, id, bayarKe);
+                                        setState(() {
+                                          isChecked = true;
+                                        });
+                                        checkListNotes.clear();
+                                        Navigator.pop(context);
+                                      }
                                     },
                                     child: Container(
                                       padding: const EdgeInsets.all(12),
@@ -560,7 +637,10 @@ class _DetailGoalsPageState extends State<DetailGoalsPage> {
         .doc(goalsId)
         .collection('checklistgoals')
         .doc(doc)
-        .update({'status_pembayaran': "done"}).then((response) {
+        .update({
+      'status_pembayaran': "done",
+      'notes': checkListNotes.text
+    }).then((response) {
       if ((_appendProgres * bayarKe) >= 100) {
         users
             .doc(uid!)
